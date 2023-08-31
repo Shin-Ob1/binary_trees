@@ -1,4 +1,4 @@
-#include "binary_trees"
+#include "binary_trees.h"
 
 /**
  * array_to_bst - builds a Binary Search Tree
@@ -27,11 +27,11 @@ bst_t *array_to_bst(int *array, size_t size)
 		}
 		if (n == m)
 		{
-			if (bst_insert(&tree, array[m]) == NULL)
+			if (bst_insert(&root, array[m]) == NULL)
 				return (NULL);
 		}
 		m++;
 	}
 
-	return (tree);
+	return (root);
 }
